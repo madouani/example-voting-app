@@ -1,7 +1,7 @@
 # Using official python runtime base image
-FROM python
+FROM python:3.11-slim AS base
+
 # add curl for healthcheck
-RUN apt-get -rm -rf /var/lib/apt/lists/*
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     curl \
