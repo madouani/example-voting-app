@@ -1,7 +1,7 @@
 # Using official python runtime base image
 FROM python
 # add curl for healthcheck
-RUN apt-get update
+
 
 # Set the application directory
 WORKDIR /app
