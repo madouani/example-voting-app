@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # add curl for healthcheck
-RUN  yum install -y curl
+RUN  apt-get install -y curl
 
 # Set the application directory
 WORKDIR /app
