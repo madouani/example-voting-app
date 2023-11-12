@@ -1,9 +1,7 @@
 # Using official python runtime base image
 FROM python
 # add curl for healthcheck
-RUN apt-get install ntp
 RUN apt-get update
-RUN apt-get install -y curl
 
 # Set the application directory
 WORKDIR /app
