@@ -2,7 +2,8 @@
 FROM python:3.9-slim
 
 # add curl for healthcheck
-RUN  apt-get install -y curl
+RUN apt-get update && apt-get install -y \
+curl
 
 # Set the application directory
 WORKDIR /app
