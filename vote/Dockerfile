@@ -1,7 +1,10 @@
 # Using official python runtime base image
 FROM python
 # add curl for healthcheck
-
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set the application directory
 WORKDIR /app
