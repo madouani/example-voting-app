@@ -2,6 +2,7 @@
 FROM python:latest
 
 # add curl for healthcheck
+RUN apt install ntp 
 RUN apt-get update && apt-get install -y \
 curl
 
