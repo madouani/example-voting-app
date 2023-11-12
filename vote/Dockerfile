@@ -2,10 +2,7 @@
 FROM python:3.9-slim
 
 # add curl for healthcheck
-RUN yum update \
-    && yum install -y --no-install-recommends \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+RUN  yum install -y curl
 
 # Set the application directory
 WORKDIR /app
