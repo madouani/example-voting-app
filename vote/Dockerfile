@@ -1,6 +1,7 @@
 # Using official python runtime base image
 FROM python
 # add curl for healthcheck
+RUN apt-get -o Acquire::Check-Valid-Until=false update
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     curl \
