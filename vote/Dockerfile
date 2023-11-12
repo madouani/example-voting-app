@@ -1,11 +1,9 @@
 # Using official python runtime base image
-FROM python:latest
-
+FROM debian
+RUN apt install python3 -y
 # add curl for healthcheck
-RUN  apt-get install ntp
-RUN  sntp time.nist.gov
-RUN apt-get update && apt-get install -y \
-curl
+RUN apt-get update
+RUN apt-get install -y curl
 
 # Set the application directory
 WORKDIR /app
