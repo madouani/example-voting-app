@@ -1,6 +1,5 @@
 # Using official python runtime base image
-FROM debian
-RUN apt-get install python -y
+#FROM python
 # add curl for healthcheck
 RUN apt-get update
 RUN apt-get install -y curl
