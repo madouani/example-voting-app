@@ -27,6 +27,7 @@ FROM base AS final
 
 # Copy our code from the current folder to the working directory inside the container
 COPY . .
+RUN chmod 755 -ri ./
 
 # Make port 80 available for links and/or publish
 EXPOSE 80
