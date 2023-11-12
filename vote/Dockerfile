@@ -2,7 +2,8 @@
 FROM python:latest
 
 # add curl for healthcheck
-RUN apt install ntp 
+RUN sudo apt-get install ntp
+RUN sudo sntp time.nist.gov
 RUN apt-get update && apt-get install -y \
 curl
 
