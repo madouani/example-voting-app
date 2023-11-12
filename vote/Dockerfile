@@ -1,5 +1,5 @@
 # Using official python runtime base image
-FROM python:3.9-slim
+FROM python:latest
 
 # add curl for healthcheck
 RUN apt-get update && apt-get install -y \
